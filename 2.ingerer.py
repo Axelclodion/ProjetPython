@@ -3,14 +3,14 @@ import sqlite3
 # Connexion à la base de données
 conn = sqlite3.connect('example.db')
 
-# Création de la table
+# Création de la table "products" avec ses colonnes et types de données
 conn.execute('''CREATE TABLE IF NOT EXISTS products
              (id INTEGER PRIMARY KEY AUTOINCREMENT,
              title TEXT,
              description TEXT,
              price REAL);''')
 
-# Insertion des données
+# Données à insérer dans la table "products"
 data = [
     {
         'title': 'Product 1',
@@ -24,13 +24,14 @@ data = [
     }
 ]
 
+# Insertion des données dans la table "products"
 for product in data:
     conn.execute('''INSERT INTO products (title, description, price)
                  VALUES (?, ?, ?)''', (product['title'], product['description'], product['price']))
 
-# Sauvegarde des modifications
+# Sauvegarde des modifications dans la base de données
 conn.commit()
 
-# Fermeture de la connexion
+# Fermeture de la connexion à la base de données
 conn.close()
 
