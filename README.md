@@ -1,8 +1,8 @@
  # Mise en œuvre d'un scraper/API générant des données sous forme de tableaux : #
 
 
-Écrire un script qui utilise Beautiful Soup pour extraire les données souhaitées à partir du site web cible ou de l'API.
+● Un scrapper/API générant des données sous forme de tableaux 
 
-Écrire un script qui se connecte à une base de données (par exemple SQLite ou MySQL) et crée une table pour stocker les données.
+● Un script capable d'ingérer les données dans la BDD 
 
-Écrire le code nécessaire pour interroger l'API/BDD et récupérer les données stockées.
+● Une fois ceci fait, faites un 3ème script capable d'interroger l'API/BDD pour afficher les données sous forme de graphique/tableau.
